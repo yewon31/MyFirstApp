@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizActivity"
+
+    android:orientation="vertical"
+    >
+
+    <!--     android:theme="@style/customToolbar" -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/quiz_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        app:title="나의 툴바"
+        app:titleTextColor="@color/myColor1"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:padding="20dp"
+        android:orientation="vertical"
+        >
+
+        <!-- 레이아웃 도구에서만 보이고, runtime에서는 보이지 않도록  -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="질문이 들어갈 자리"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            />
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

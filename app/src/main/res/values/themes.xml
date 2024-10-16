@@ -1,0 +1,32 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyFirstApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!--상태바 색상 -->
+        <item name="android:statusBarColor">@color/black</item>
+
+        <!-- 머티리얼 디자인의 기본 색상값 -->
+        <item name="colorPrimary">@color/myBtn1</item>
+
+    </style>
+
+    <style name="Theme.MyFirstApp" parent="Base.Theme.MyFirstApp" />
+
+
+    <!--
+        툴바에 전역 스타일 설정
+        background - 툴바 배경색
+
+    -->
+    <!--
+    <style name="customToolbar">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/myColor2</item>
+        <item name="android:colorControlNormal">@color/myColor1</item>
+    </style>
+    -->
+
+
+</resources>
