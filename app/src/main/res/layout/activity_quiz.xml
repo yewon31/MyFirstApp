@@ -16,29 +16,162 @@
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
         app:title="나의 툴바"
+
         app:titleTextColor="@color/myColor1"
+
         />
 
-    <LinearLayout
+    <!--
+    스크롤뷰
+    - 단하나의 자식만 가져야 함
+    - fillViewport 화면에 꽉 채움
+
+    nested스크롤 뷰
+    - 스크롤 뷰가 중첩되는 상황에서 사용하는 뷰
+    -->
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
-        android:padding="20dp"
-        android:orientation="vertical"
+        android:fillViewport="true"
         >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
 
-        <!-- 레이아웃 도구에서만 보이고, runtime에서는 보이지 않도록  -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="질문이 들어갈 자리"
-            android:layout_gravity="center"
-            android:textSize="20sp"
-            />
+            android:padding="20dp"
+            android:orientation="vertical"
+            >
 
-    </LinearLayout>
+            <!-- 레이아웃 도구에서만 보이고, runtime에서는 보이지 않도록  -->
+            <TextView
+                android:id="@+id/quiz_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="질문이 들어갈 자리"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                />
+
+            <Button
+                android:id="@+id/hint_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="힌트"
+                android:backgroundTint="@color/myColor1"
+                app:cornerRadius="0dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/hint_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                tools:src="@drawable/quiz01"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                >
+
+                <!--
+                    너비, 높이를 0 주고 weight 1주면 남은 영역을 채움
+                -->
+                <ProgressBar
+                    android:id="@+id/prog_bar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:max="10"
+                    android:progress="1"
+                    android:progressBackgroundTint="#e3e3e3"
+                    android:progressTint="@color/myBtn1"
+                    android:minHeight="20dp"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/prog_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 중 1"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                tools:text="질문1"
+                android:padding="8dp"
+                android:gravity="center"
+                android:background="@drawable/edittext_round_rectangle"
+                android:layout_marginTop="20dp"
+                />
+            <TextView
+                android:id="@+id/two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                tools:text="질문2"
+                android:padding="8dp"
+                android:gravity="center"
+                android:background="@drawable/edittext_round_rectangle"
+                android:layout_marginTop="20dp"
+                />
+            <TextView
+                android:id="@+id/three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                tools:text="질문3"
+                android:padding="8dp"
+                android:gravity="center"
+                android:background="@drawable/edittext_round_rectangle"
+                android:layout_marginTop="20dp"
+                />
+            <TextView
+                android:id="@+id/four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                tools:text="질문4"
+                android:padding="8dp"
+                android:gravity="center"
+                android:background="@drawable/edittext_round_rectangle"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:id="@+id/next_btn"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:text="다음으로"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/edittext_round_circle"
+                android:layout_marginTop="20dp"
+                />
 
 
+
+        </LinearLayout>
+
+    </ScrollView>
 
 
 
