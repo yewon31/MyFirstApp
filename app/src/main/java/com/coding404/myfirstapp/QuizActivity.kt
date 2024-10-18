@@ -109,7 +109,7 @@ class QuizActivity : AppCompatActivity() , View.OnClickListener {
 
         //첫번째 엑티비티에서 넘어온값을 전역변수로 저장
         name = intent.getStringExtra("name")
-        Log.d(TAG, "name = ${name}")
+
 
     } //end create
 
@@ -205,8 +205,8 @@ class QuizActivity : AppCompatActivity() , View.OnClickListener {
                         userAnswer = 0 //유저의 정답 초기화
                     } else { //마지막인 경우
                         val intent = Intent(this, ResultActivity::class.java)
-                        intent.putExtra("collectCnt", collectCnt)
                         intent.putExtra("name", name)
+                        intent.putExtra("collectCnt", collectCnt)
                         startActivity(intent)
                         finish() //현재 엑티비티는 종료
                     }

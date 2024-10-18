@@ -116,6 +116,7 @@
                 android:gravity="center"
                 android:background="@drawable/edittext_round_rectangle"
                 android:layout_marginTop="20dp"
+
                 />
             <TextView
                 android:id="@+id/two"
@@ -165,6 +166,7 @@
                 android:layout_gravity="center"
                 android:background="@drawable/edittext_round_circle"
                 android:layout_marginTop="20dp"
+
                 />
 
 
